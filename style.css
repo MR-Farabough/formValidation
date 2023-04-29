@@ -1,3 +1,8 @@
+:root {
+	--orange: #f58f29;
+	--lightPurple: #6f58c9;
+}
+
 body {
 	background-color: black;
 	height: 98vh;
@@ -9,7 +14,7 @@ body {
 .container {
 	display: flex;
 	flex-direction: column;
-	background-color: #6f58c9;
+	background-color: var(--lightPurple);
 	padding: 15px;
 	width: 80%;
 	max-width: 500px;
@@ -23,7 +28,11 @@ form {
 	flex-direction: column;
 }
 
-input {
+input,
+.form-select {
+	cursor: pointer;
+	flex: 1;
+	max-width: 250px;
 	background-color: #7e78d2;
 	padding: 10px;
 	border: 1px solid #bbdbd1;
@@ -34,7 +43,7 @@ input {
 }
 
 button {
-	background-color: #f58f29;
+	background-color: var(--orange);
 	color: white;
 	font-weight: bolder;
 	font-size: 20px;
@@ -49,4 +58,46 @@ button {
 	font-weight: bolder;
 	font-size: 20px;
 	margin: 10px;
+}
+
+/* FORM VALIDATION */
+
+#email:valid {
+	border: 2px solid rgb(0, 255, 0);
+}
+
+#email:invalid {
+	border: 2px solid var(--orange);
+}
+
+.form-select:valid {
+	border: 2px solid rgb(0, 255, 0);
+}
+
+.form-select:invalid {
+	border: 2px solid var(--orange);
+}
+
+#zipCode:valid {
+	border: 2px solid rgb(0, 255, 0);
+}
+
+#zipCode:invalid {
+	border: 2px solid var(--orange);
+}
+
+#password:valid {
+	border: 2px solid rgb(0, 255, 0);
+}
+
+#password:invalid {
+	border: 2px solid var(--orange);
+}
+
+#verify-password:valid {
+	border: 2px solid rgb(0, 255, 0);
+}
+
+#verify-password:invalid {
+	border: 2px solid var(--orange);
 }
